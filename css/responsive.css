@@ -1,0 +1,83 @@
+/* Mobile First - Base styles above are for mobile */
+
+/* Tablets and Small Desktops */
+@media (min-width: 768px) {
+    body {
+        padding: 32px;
+    }
+
+    .container {
+        padding: 40px;
+    }
+
+    .app-header h1 {
+        font-size: 40px;
+    }
+
+    .step h2 {
+        font-size: 28px;
+    }
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .action-buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .action-buttons .btn:last-child {
+        grid-column: auto;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1440px) {
+    body {
+        padding: 48px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn {
+        min-height: 44px;
+        font-size: 18px;
+    }
+
+    input,
+    select {
+        min-height: 44px;
+        font-size: 16px;
+    }
+}
+
+/* Dark Mode Support (Future) */
+@media (prefers-color-scheme: dark) {
+    /* Dark mode styles can be added here in future updates */
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+    }
+
+    .action-buttons,
+    .btn {
+        display: none;
+    }
+
+    .step {
+        display: block !important;
+    }
+}
